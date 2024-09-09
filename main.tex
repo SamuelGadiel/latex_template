@@ -1,0 +1,129 @@
+\documentclass [12pt]{article}
+
+\usepackage{geometry}
+\geometry{a4paper, left=3cm, top=3cm, right=2cm, bottom=2cm}
+ 
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{caption}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\graphicspath{ {images/} }
+\usepackage{subfigure}
+
+\usepackage{bm}
+\usepackage{cancel}
+
+\usepackage{fancyhdr}
+
+\usepackage[RPvoltages, american]{circuitikz}
+
+\usepackage[scr]{rsfso}
+\newcommand{\lap}{\mathscr{L}}
+\newcommand{\ilap}{\mathscr{L}^{-1}}
+
+\usepackage{icomma}
+
+
+\usepackage{listings}
+\usepackage{color}
+ 
+\definecolor{codegray}{rgb}{0.3,0.3,0.3}
+\definecolor{comments}{RGB}{45, 161, 45}
+\definecolor{keyword}{RGB}{12, 38, 237}
+\definecolor{background}{RGB}{240, 240, 240}
+\definecolor{params}{RGB}{0, 0, 255}
+
+\lstdefinestyle{mystyle}{
+    language=c++,
+    backgroundcolor=\color{background},
+    commentstyle=\color{comments},
+    keywordstyle=\color{keyword},
+    numberstyle=\small\color{codegray},
+    stringstyle=\color{blue},
+    basicstyle=\ttfamily,
+    extendedchars=true,
+    breaklines=true,
+    columns=fullflexible,
+    numbers=left,
+    numbersep=5pt,
+    tabsize=2,
+    showstringspaces=false,
+    keywords={sudo, cp, echo, ls, cd, tar, export, make, cat, exit},
+    otherkeywords={--version, qemu-system-arm, -M, -m, -kernel, -nographic, -j4, -dtb, -append, -xvf, -net, void},
+    morekeywords =[2] {--version, -M, -m, -kernel, -nographic, -j4, -dtb, -append, -xvf, -net},
+    keywordstyle=[2]{\color{params}}
+}
+
+\lstset{style=mystyle}
+
+\newcommand{\linha}{
+    \vskip 0.5cm
+}
+  
+\newcommand{\imagem}[2][1.0]{
+    \begin{center}
+    \begin{figure}[ht]
+    \makebox[\textwidth][c]{\includegraphics[width= #1 \textwidth]{#2.png}}
+    \end{figure}
+    \end{center}
+}
+
+\newcommand{\questao}[1]{
+\section*{--- Questão #1 ---------------------------------------------------}
+}
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+\pagestyle{fancy}
+
+\fancyhead{}
+\fancyfoot{}
+
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+\sloppy
+% ----- Página de título -----
+\begin{titlepage}
+  \huge
+  \begin{center}
+    Universidade de Uberaba\\
+    \Large
+    Faculdade de Engenharia da Computação \\
+    Professor XXX\\
+    \vspace{5cm}
+
+    \textbf{Título}\\
+    \textbf{Subtítulo}
+
+  \end{center}
+  \vspace{3cm} \normalsize
+  \begin{flushright}
+    % Nomes - Número de matrícula
+    Samuel Gadiel de Ávila\\
+    RA 5158902\\
+    samuelgadiel@gmail.com\\
+  \end{flushright}
+  \vfill
+  \begin{center}
+    Uberlândia – Minas Gerais\\
+    \the\year
+  \end{center}
+\end{titlepage}
+
+\pagenumbering{arabic}
+
+%\tableofcontents
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
